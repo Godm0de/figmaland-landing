@@ -1,0 +1,15 @@
+{
+  "name": "figmaland",
+  "version": "0.0.1",
+  "description": "Figma land landing",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Godm0de",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
