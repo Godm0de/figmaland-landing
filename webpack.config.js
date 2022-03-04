@@ -1,14 +1,34 @@
 const path = require('path');
+const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		index: './src/index.js',
+		main: './src/main.js',
 	},
 
 	output: {
-		path: path.resolve(__dirname, './dist'),
+		path: path.resolve(__dirname, './build'),
 		filename: '[name].js',
 	},
 
+	module: {
+		rules: []
+	},
 
+	plugins: [new htmlWebpackPlugin({template: './src/index.html'})],
+
+	devServer: {
+		static: path.resolve(__dirname, './build'),
+		open: true,
+		port: 4200,
+		host: 'local-ipv4' && 'localhost',
+		liveReload: true,
+		watchFiles:['./src/index.html', './src/main.js'],
+		compress: true,
+		hot: false,
+		client: {
+			overlay: true,
+			progress: true,
+		}	
+	}
 }
