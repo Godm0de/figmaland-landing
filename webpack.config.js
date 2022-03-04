@@ -15,7 +15,14 @@ module.exports = {
 		rules: []
 	},
 
-	plugins: [new htmlWebpackPlugin({template: './src/index.html'})],
+	plugins: [
+		new htmlWebpackPlugin(
+		{
+			title: 'Figmaland',
+			template: './src/index.html',
+			favicon: './src/assets/favicon.ico'
+		}
+	)],
 
 	devServer: {
 		static: path.resolve(__dirname, './build'),
