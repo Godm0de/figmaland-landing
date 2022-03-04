@@ -11,9 +11,19 @@ module.exports = {
 		filename: '[name].js',
 	},
 
+
+
 	module: {
-		rules: []
+		rules: [
+			{
+				test: /\.(s(a|c)ss)$/,
+				use: ['style-loader','css-loader', 'sass-loader']
+			}
+		]
 	},
+	resolve: {
+        extensions: ['*', '.js', '.scss']
+    },
 
 	plugins: [
 		new htmlWebpackPlugin(
