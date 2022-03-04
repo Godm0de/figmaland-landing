@@ -8,7 +8,7 @@ module.exports = {
 
 	output: {
 		path: path.resolve(__dirname, './build'),
-		filename: '[name].js',
+		filename: '[name].[contenthash].js',
 	},
 
 
@@ -47,5 +47,6 @@ module.exports = {
 			overlay: true,
 			progress: true,
 		}	
-	}
+	},
+
 }
