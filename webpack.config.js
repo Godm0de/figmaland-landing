@@ -1,5 +1,5 @@
 const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
@@ -18,6 +18,10 @@ module.exports = {
 			{
 				test: /\.(s(a|c)ss)$/,
 				use: ['style-loader','css-loader', 'sass-loader']
+			},
+			{
+				test: /\.pug$/,
+				use: ['pug-loader']
 			}
 		]
 	},
@@ -26,12 +30,11 @@ module.exports = {
     },
 
 	plugins: [
-		new htmlWebpackPlugin(
+		new HtmlWebpackPlugin(
 		{
 			title: 'Figmaland',
-			template: './src/index.html',
-			favicon: './src/assets/favicon.ico'
-		}
+			template: './src/index.pug'
+		},
 	)],
 
 	devServer: {
