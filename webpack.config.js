@@ -41,11 +41,6 @@ module.exports = {
 		static: path.resolve(__dirname, './build'),
 		open: true,
 		port: 4200,
-		host: 'local-ipv4' && 'localhost',
-		liveReload: true,
-		watchFiles:['*.pug', './src/main.js'],
-		compress: true,
-		hot: false,
 		client: {
 			overlay: true,
 			progress: true,
