@@ -26,7 +26,7 @@ module.exports = {
 		]
 	},
 	resolve: {
-        extensions: ['*', '.js', '.scss']
+        extensions: ['*', '.js', '.scss', '.pug']
     },
 
 	plugins: [
