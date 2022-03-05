@@ -43,7 +43,7 @@ module.exports = {
 		port: 4200,
 		host: 'local-ipv4' && 'localhost',
 		liveReload: true,
-		watchFiles:['./src/index.html', './src/main.js'],
+		watchFiles:['*.pug', './src/main.js'],
 		compress: true,
 		hot: false,
 		client: {
