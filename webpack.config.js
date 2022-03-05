@@ -2,8 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+
+
 	entry: {
 		main: './src/main.js',
+		index: './src/index.pug',
 	},
 
 	output: {
@@ -37,13 +40,14 @@ module.exports = {
 		},
 	)],
 
+
+
 	devServer: {
 		static: path.resolve(__dirname, './build'),
 		open: true,
 		port: 4200,
 		client: {
 			overlay: true,
-			progress: true,
 		}	
 	},
 
